@@ -54,9 +54,6 @@ export default function Login() {
         email: values.email,
         password: values.password,
       }
-    },{
-        withCredentials: true,
-        headers: {'Content-Type': 'application/json'}
     })
     .then(response =>{
         const accessToken = response?.data?.user?.token;
