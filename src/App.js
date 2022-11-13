@@ -17,7 +17,7 @@ function App() {
   const {userinfo} = useContext(Context);
 
   return (
-    <Router>
+    <Router basename="/timesheet">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={userinfo ? <Home /> : <Login />}/>
