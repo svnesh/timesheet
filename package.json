@@ -1,6 +1,6 @@
 {
-  "homepage": "https://svnesh.github.io/timesheet/",
   "name": "timesheet",
+  "homepage": "https://svnesh.github.io/timesheet/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

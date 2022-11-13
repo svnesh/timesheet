@@ -7,7 +7,8 @@ import { Context } from "../../context/context"
 import axios from "axios"
 
 const Single = () => {
-
+  
+  const baseurl = "https://svignesh.pythonanywhere.com/";
   const { userinfo } = useContext(Context);
   const location = useLocation();
   const path = location.pathname.split("/")[2];
@@ -25,7 +26,7 @@ const Single = () => {
   useEffect(() => {
     
     const getJob = async () => {
-        const res = await axios.get("api/track/" + path + "/", config);
+        const res = await axios.get(baseurl + "api/track/" + path + "/", config);
         //console.log(res.data)
         setJob(res.data);
         setStatus(res.data.status);
@@ -36,7 +37,7 @@ const Single = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    await axios.put("api/track/" + path + "/", {
+    await axios.put(baseurl + "api/track/" + path + "/", {
         id:path,
         status:status,
         comment:comment

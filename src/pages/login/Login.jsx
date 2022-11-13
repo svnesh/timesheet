@@ -2,13 +2,14 @@ import { useContext } from "react";
 import { useState } from "react"
 import LoginForm from "../../components/login/LoginForm"
 import { Context } from "../../context/context";
-import { useNavigate } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import axios from "axios";
 
 import "./login.scss";
 
 export default function Login() {
 
+  const baseurl = "https://svignesh.pythonanywhere.com/";
   const navigate = useNavigate();
   const { dispatch, isfetching } = useContext(Context);
 
@@ -48,7 +49,7 @@ export default function Login() {
     //setError(false);
     dispatch({type: "LOGIN_START"});
 
-    await axios.post("api/users/login/", {
+    await axios.post(baseurl + "api/users/login/", {
       user:{
         email: values.email,
         password: values.password,
@@ -86,7 +87,7 @@ export default function Login() {
           <button className="loginbutton" disabled={isfetching}>Login</button>
         </form>
         <div className="registerbutton">
-            New user? <a href="/register" className="registerlink">Register</a>
+            New user? <Link to="/register" className="registerlink">Register</Link>
         </div>
       </div>                
     </div>

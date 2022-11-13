@@ -9,12 +9,13 @@ import axios from "axios"
 
 const Report = () => {
 
+const baseurl = "https://svignesh.pythonanywhere.com/";
 const { userinfo } = useContext(Context);
 const [values, setValues] = useState([]);
 
 useEffect(() =>{
     const fetchAllValues = async ()=>{
-        const res = await axios.get("api/trackfilter/", {
+        const res = await axios.get(baseurl + "api/trackfilter/", {
         headers: {
             "Authorization": 'Token ' + userinfo.accessToken
         },
