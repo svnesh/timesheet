@@ -9,13 +9,14 @@ import aixos from "axios"
 
 const Home = () => {
 
+  const baseurl = "https://svignesh.pythonanywhere.com/";
   const { userinfo } = useContext(Context);
   const [jobs, setJobs] = useState([]);
   const [jstatus, setjStatus] = useState({});
 
   useEffect(() =>{
     const fetchJobs = async ()=>{
-      const res = await aixos.get("api/userdue/", {
+      const res = await aixos.get(baseurl + "api/userdue/", {
         headers: {
           "Authorization": 'Token ' + userinfo.accessToken
         },
@@ -28,7 +29,7 @@ const Home = () => {
 
   useEffect(() =>{
     const fetchStatus = async ()=>{
-      const res = await aixos.get("api/track/", {
+      const res = await aixos.get(baseurl + "api/track/", {
         headers: {
           "Authorization": 'Token ' + userinfo.accessToken
         },

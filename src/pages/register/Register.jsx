@@ -2,11 +2,12 @@ import axios from "axios"
 import RegisterForm from "../../components/register/RegisterForm";
 import { useState } from "react"
 import "./register.scss";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 export default function Register() {
 
   const baseurl = "https://svignesh.pythonanywhere.com/";
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     email:'',
     username:'',
@@ -25,7 +26,7 @@ export default function Register() {
               password:values.password,
             }
         });
-        res.data && window.location.replace("/");
+        res.data && navigate('/');
     }catch(err){
         setError(true);
     }
@@ -78,7 +79,7 @@ export default function Register() {
           {error && <p style={{color:"red"}}>Something went wrong!</p>}
         </form>
         <div className="loginbutton">
-            Already registered? <Link to="/" className="loginlink">Login</Link>
+            Already registered? <Link to="/login" className="loginlink">Login</Link>
         </div>        
         </div>
     </div>
