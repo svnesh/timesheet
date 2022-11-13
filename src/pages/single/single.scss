@@ -1,0 +1,126 @@
+.single{
+    display: flex;
+
+    .singlecontainer{
+        flex: 6;
+
+        .trackerdata{
+            padding: 10px 20px 0px 20px;
+
+            .tracksingletable{
+                width: 80%;
+                border-collapse: collapse;
+                font-size: 16px;
+
+                thead{
+                    background-color: #b5a2f9;
+                    color: #ffffff;
+                    text-align: left;
+
+                    tr th:first-child{
+                        width: 300px;
+                    }
+                }
+                th,td{
+                    padding: 6px 5px;
+                }
+                tbody{
+                    tr{
+                        td{
+                            border-bottom: 1px solid rgb(198, 196, 196);
+
+                            .cmtdate{
+                                font-size: 12px;
+                                color: gray;
+                                font-weight: bold;
+                            }
+                            .cmttext{
+                                padding: 0px 0px 5px 10px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .updatesection{
+            padding: 20px 0px 0px 10px;
+            height: 300px;
+
+            .statusdropdown{
+                display: flex;
+                padding-top: 10px;
+
+                .statustitle{
+                    font-size: 14px;
+                    padding-right: 10px;
+                }
+
+                .status{
+                    height: 30px;
+                    border: none;
+                    overflow: hidden;
+        
+                    &:-moz-focus-inner{
+                        border: 0;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                    option{
+                        width: 80px;
+                        font-size: 13px;
+                        font-weight: bold;                
+                        text-align: center;
+                        margin-right: 10px;
+                        display: inline-block;
+                        cursor: pointer;
+                        border:rgb(204, 204, 0) solid 2px;
+                        border-radius: 5px;
+                        color: rgb(3, 162, 3);
+                    }
+                }
+            }
+
+            .updatecomment{
+                padding: 10px 0px 10px 0px;
+                display: flex;
+
+                .statustitle{
+                    font-size: 14px;
+                    padding-right: 10px;
+                }
+
+                textarea{
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    padding: 3px;
+                    overflow: hidden;
+                }
+                textarea::placeholder{
+                    font-size: 12px;
+                }
+                .commentarea{
+                    height: 100px;
+                    width: 300px;
+                    resize: none;
+                    border: rgb(186, 186, 186) solid 0.2px;              
+                }
+            }
+
+            .submitbtn{
+                width: 100px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: whitesmoke;
+                padding: 8px;
+                border-radius: 5px;
+                background-color: rgb(85, 85, 200);
+                cursor: pointer;
+            }
+        }
+    }
+}

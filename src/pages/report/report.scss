@@ -1,0 +1,32 @@
+.reportdiv{
+    display: flex;
+
+    .reportcontainer{
+        flex: 6;
+
+        .formdiv{
+            padding: 10px 0px 0px 10px;
+
+            .formtitle{
+                font-size: 16px;
+                font-weight: bold;
+                color: gray;
+            }
+            .reportform{
+                margin-top: 10px;
+
+                button{
+                    width: 60px;
+                    height: 30px;
+                    border: none;
+                    background-color: rgb(71, 99, 12);
+                    color: white;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

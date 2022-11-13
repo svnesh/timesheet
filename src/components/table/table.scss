@@ -1,0 +1,97 @@
+.listtable{
+    border-radius: 10px;
+    height: 300px;
+    padding: 10px 10px 10px 10px;
+    overflow: auto;
+
+    .table{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        thead th:nth-child(6){
+            width: 20px;
+        }
+        thead tr{
+            background-color: #b5a2f9;
+            color: #ffffff;
+            text-align: left;
+        }
+        th,td{
+            padding: 6px 5px;
+        }
+        tbody {
+            tr{
+            border-bottom: 1px solid rgb(198, 196, 196);
+            }
+            tr:nth-of-type(even){
+                background-color: #f3f3f3;
+            }
+            tr:last-of-type{
+                border-bottom: 2px solid rgb(179, 178, 178);
+            }
+            
+            
+
+            .cellaction{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                .viewbtn{
+                    text-decoration: none;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    color: darkblue;
+                    border: 1px dotted rgb(46, 46, 246);
+                    cursor: pointer;
+                }
+                
+            }
+        }
+
+        .status{
+            height: 20px;
+            border: none;
+            overflow: hidden;
+            background-color: transparent;
+
+            &:-moz-focus-inner{
+                border: 0;
+                
+            }
+            &:focus{
+                outline: none;
+            }
+            option{
+                width: 30px;
+                font-size: 12px;
+                font-weight: bold;                
+                text-align: center;
+                margin-right: 10px;
+                display: inline-block;
+                cursor: pointer;
+                border:rgb(204, 204, 0) solid 1.5px;
+                border-radius: 5px;
+                color: rgb(3, 162, 3);
+            }
+        }
+    }
+}
+
+.subtitle{
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    padding: 0px 0px 0px 10px;
+
+    .clientname{
+        padding-right: 2px;
+    }
+    .stagetxt{
+        margin-left: auto;
+        margin-right: 10px;
+    }
+}
