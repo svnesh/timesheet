@@ -1,7 +1,7 @@
 import "./single.scss"
 import Navbar from "../../components/navbar/Navbar"
 import Sidebar from "../../components/sidebar/Sidebar"
-import { navigate,useLocation } from "react-router-dom"
+import { navigate,useLocation, useNavigate } from "react-router-dom"
 import { useContext,useState,useEffect } from "react"
 import { Context } from "../../context/context"
 import axios from "axios"
@@ -9,7 +9,6 @@ import axios from "axios"
 const Single = () => {
   
   const baseurl = "https://svignesh.pythonanywhere.com/";
-  const navigate = useNavigate();
   const { userinfo } = useContext(Context);
   const location = useLocation();
   const path = location.pathname.split("/")[2];
@@ -35,6 +34,7 @@ const Single = () => {
     getJob()
   }, [path])
 
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     
