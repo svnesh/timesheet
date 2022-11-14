@@ -37,7 +37,7 @@ useEffect(() =>{
     { field: 'updateddatetime', headerName: 'Update Date', type:'datetime', width: 100 },
     ];
 
-    console.log(values);
+    //console.log(values);
     const rows = values.map((value) =>
         ({
             id:value?.id,

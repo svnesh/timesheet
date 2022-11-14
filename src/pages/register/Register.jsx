@@ -79,7 +79,7 @@ export default function Register() {
           {error && <p style={{color:"red"}}>Something went wrong!</p>}
         </form>
         <div className="loginbutton">
-            Already registered? <Link to="/login" className="loginlink">Login</Link>
+            Already registered? <Link to="/" className="loginlink">Login</Link>
         </div>        
         </div>
     </div>
